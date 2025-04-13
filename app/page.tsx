@@ -23,16 +23,32 @@ interface CartItem {
   toppings?: string[]
 }
 
+interface Flavor {
+  id: string
+  name: string
+  description: string
+  image: string
+  color: string
+  category: string
+  price: string
+  ingredients: string[]
+  allergens: string[]
+  nutritionalInfo: {
+    calories: string
+    fat: string
+    sugar: string
+  }
+}
+
 export default function Home() {
   const [loading, setLoading] = useState(true)
-  const [muted, setMuted] = useState(true)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [activeSection, setActiveSection] = useState("hero")
-  const [selectedFlavor, setSelectedFlavor] = useState<any>(null)
+  const [selectedFlavor, setSelectedFlavor] = useState<Flavor | null>(null)
   const [isFlavorModalOpen, setIsFlavorModalOpen] = useState(false)
   const [isCartOpen, setIsCartOpen] = useState(false)
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false)
-  const [quickViewFlavor, setQuickViewFlavor] = useState<any>(null)
+  const [quickViewFlavor, setQuickViewFlavor] = useState<Flavor | null>(null)
   const [cartItems, setCartItems] = useState<CartItem[]>([])
   const [notification, setNotification] = useState({ message: "", type: "success", isVisible: false })
   const [selectedCategory, setSelectedCategory] = useState("all")
@@ -40,13 +56,13 @@ export default function Home() {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const heroRef = useRef(null)
-  const storyRef = useRef(null)
-  const flavorsRef = useRef(null)
-  const storesRef = useRef(null)
-  const labRef = useRef(null)
-  const pressRef = useRef(null)
-  const socialRef = useRef(null)
+  const heroRef = useRef<HTMLDivElement>(null)
+  const storyRef = useRef<HTMLDivElement>(null)
+  const flavorsRef = useRef<HTMLDivElement>(null)
+  const storesRef = useRef<HTMLDivElement>(null)
+  const labRef = useRef<HTMLDivElement>(null)
+  const pressRef = useRef<HTMLDivElement>(null)
+  const socialRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll()
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
@@ -60,12 +76,12 @@ export default function Home() {
     {
       title: "Tradition meets innovation",
       subtitle: "Where Italian heritage embraces modern creativity",
-      image: "/Hero.jpg?height=1080&width=1920",
+      image: "/Hero2.webp?height=1080&width=1920",
     },
     {
       title: "Taste the extraordinary",
       subtitle: "Unexpected flavors, unforgettable experiences",
-      image: "/Hero.jpg?height=1080&width=1920",
+      image: "/Hero3.jpg?height=1080&width=1920",
     },
   ]
 
@@ -358,9 +374,8 @@ export default function Home() {
       ]
 
       for (const section of sections) {
-        if (!section.ref.current) continue
-
         const element = section.ref.current
+        if (!element) return
         const rect = element.getBoundingClientRect()
         const topPosition = rect.top + window.scrollY
         const bottomPosition = rect.bottom + window.scrollY
@@ -376,11 +391,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const toggleMute = () => {
-    setMuted(!muted)
-  }
-
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({
@@ -390,17 +401,17 @@ export default function Home() {
     }
   }
 
-  const openFlavorModal = (flavor) => {
+  const openFlavorModal = (flavor: Flavor) => {
     setSelectedFlavor(flavor)
     setIsFlavorModalOpen(true)
   }
 
-  const openQuickView = (flavor) => {
+  const openQuickView = (flavor: Flavor) => {
     setQuickViewFlavor(flavor)
     setIsQuickViewOpen(true)
   }
 
-  const addToCart = (flavor, quantity = 1, size = "regular", toppings = []) => {
+  const addToCart = (flavor: Flavor, quantity = 1, size = "regular", toppings = []) => {
     const existingItemIndex = cartItems.findIndex(
       (item) =>
         item.id === flavor.id && item.size === size && JSON.stringify(item.toppings) === JSON.stringify(toppings),
@@ -426,7 +437,7 @@ export default function Home() {
     showNotification(`${flavor.name} added to cart`, "success")
   }
 
-  const updateCartItemQuantity = (id, quantity) => {
+  const updateCartItemQuantity = (id: string, quantity: number) => {
     if (quantity <= 0) {
       removeCartItem(id)
       return
@@ -702,14 +713,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Sound Control */}
-      <button
-        onClick={toggleMute}
-        className="fixed bottom-8 left-8 z-30 p-3 rounded-full bg-black/30 backdrop-blur-sm hover:bg-black/50 transition-colors"
-      >
-        {muted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-      </button>
-
       {/* Floating Cart Button (Mobile) */}
       <div className="md:hidden">
         <FloatingCartButton
@@ -873,7 +876,7 @@ export default function Home() {
                     src={flavor.image || "/placeholder.svg"}
                     alt={flavor.name}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110 mix-blend-luminosity group-hover:mix-blend-normal"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:mix-blend-normal"
                   />
                   <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span className="px-4 py-2 border border-white text-sm tracking-wider">QUICK VIEW</span>
