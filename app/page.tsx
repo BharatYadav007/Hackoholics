@@ -1091,7 +1091,7 @@ export default function Home() {
               className="border-white text-white hover:bg-white hover:text-black rounded-none px-8"
               onClick={() => window.open("https://instagram.com", "_blank")}
             >
-              Follow Us @GelatoArtisans
+              Follow Us @La_Crème_Glacée
             </Button>
           </motion.div>
         </div>
