@@ -55,17 +55,17 @@ export default function Home() {
     {
       title: "Gelato, but make it art.",
       subtitle: "Crafted with passion, served with style",
-      image: "/placeholder.svg?height=1080&width=1920",
+      image: "/Hero.jpg?height=1080&width=1920",
     },
     {
       title: "Tradition meets innovation",
       subtitle: "Where Italian heritage embraces modern creativity",
-      image: "/placeholder.svg?height=1080&width=1920",
+      image: "/Hero.jpg?height=1080&width=1920",
     },
     {
       title: "Taste the extraordinary",
       subtitle: "Unexpected flavors, unforgettable experiences",
-      image: "/placeholder.svg?height=1080&width=1920",
+      image: "/Hero.jpg?height=1080&width=1920",
     },
   ]
 
@@ -82,7 +82,7 @@ export default function Home() {
       id: "1",
       name: "Pistachio Dream",
       description: "Premium pistachios from Sicily, slow-roasted and blended into our signature cream base.",
-      image: "/placeholder.svg?height=600&width=600",
+      image: "/Pistachio.jpg?height=600&width=600",
       color: "bg-[#9BC88B]",
       category: "signature",
       price: "$8.95",
@@ -105,7 +105,7 @@ export default function Home() {
       id: "2",
       name: "Madagascar Vanilla",
       description: "Pure Madagascar vanilla beans infused in our cream for 24 hours to extract maximum flavor.",
-      image: "/placeholder.svg?height=600&width=600",
+      image: "/Vanilla.jpg?height=600&width=600",
       color: "bg-[#F2E8DC]",
       category: "classic",
       price: "$7.95",
@@ -121,7 +121,7 @@ export default function Home() {
       id: "3",
       name: "Dark Chocolate",
       description: "72% single-origin dark chocolate from Ecuador, creating a rich and intense flavor profile.",
-      image: "/placeholder.svg?height=600&width=600",
+      image: "/Dark.jpg?height=600&width=600",
       color: "bg-[#4A3636]",
       category: "classic",
       price: "$7.95",
@@ -145,7 +145,7 @@ export default function Home() {
       name: "Salted Caramel",
       description:
         "Handcrafted caramel with fleur de sel, swirled into our creamy base for a sweet and salty experience.",
-      image: "/placeholder.svg?height=600&width=600",
+      image: "/Caramel.jpg?height=600&width=600",
       color: "bg-[#D4A373]",
       category: "signature",
       price: "$8.50",
@@ -168,7 +168,7 @@ export default function Home() {
       id: "5",
       name: "Strawberry Fields",
       description: "Fresh seasonal strawberries, lightly macerated and folded into our cream base.",
-      image: "/placeholder.svg?height=600&width=600",
+      image: "/Strawberry.jpg?height=600&width=600",
       color: "bg-[#E5989B]",
       category: "seasonal",
       price: "$8.50",
@@ -191,7 +191,7 @@ export default function Home() {
       id: "6",
       name: "Coconut Passion",
       description: "Creamy coconut milk base with tropical passion fruit swirls for a dairy-free delight.",
-      image: "/placeholder.svg?height=600&width=600",
+      image: "/Coconut.jpg?height=600&width=600",
       color: "bg-[#F8F4EA]",
       category: "vegan",
       price: "$9.50",
@@ -213,7 +213,7 @@ export default function Home() {
       id: "7",
       name: "Hazelnut Rocher",
       description: "Premium hazelnuts roasted to perfection, with chocolate pieces throughout.",
-      image: "/placeholder.svg?height=600&width=600",
+      image: "/Hazelnut.jpg?height=600&width=600",
       color: "bg-[#8B7E74]",
       category: "signature",
       price: "$9.95",
@@ -236,7 +236,7 @@ export default function Home() {
       id: "8",
       name: "Mint Chocolate",
       description: "Fresh mint leaves steeped in our cream base, with dark chocolate chips folded in.",
-      image: "/placeholder.svg?height=600&width=600",
+      image: "/Pistachio.jpg?height=600&width=600",
       color: "bg-[#A7D7C5]",
       category: "classic",
       price: "$8.50",
@@ -259,7 +259,7 @@ export default function Home() {
       id: "9",
       name: "Mango Tango",
       description: "Alphonso mangoes blended with a hint of lime for a refreshing tropical experience.",
-      image: "/placeholder.svg?height=600&width=600",
+      image: "/Mango.jpg?height=600&width=600",
       color: "bg-[#FFB347]",
       category: "seasonal",
       price: "$8.95",
@@ -284,36 +284,36 @@ export default function Home() {
     {
       city: "Buenos Aires",
       address: "Av. Alvear 1750, Recoleta",
-      image: "/placeholder.svg?height=800&width=600",
+      image: "/Buenos.jpg?height=800&width=600",
       accent: "border-[#F4ACB7]",
     },
     {
       city: "Miami",
       address: "240 Lincoln Road, Miami Beach",
-      image: "/placeholder.svg?height=800&width=600",
+      image: "/Miami.jpg?height=800&width=600",
       accent: "border-[#9BC88B]",
     },
     {
       city: "Rome",
       address: "Via del Corso 42, Centro Storico",
-      image: "/placeholder.svg?height=800&width=600",
+      image: "/Rome.jpg?height=800&width=600",
       accent: "border-[#D4A373]",
     },
     {
       city: "New York",
       address: "372 West Broadway, SoHo",
-      image: "/placeholder.svg?height=800&width=600",
+      image: "/NewYork.jpg?height=800&width=600",
       accent: "border-[#4A4E69]",
     },
   ]
 
   const press = [
-    { name: "Vogue", logo: "/placeholder.svg?height=100&width=200" },
-    { name: "GQ", logo: "/placeholder.svg?height=100&width=200" },
-    { name: "Food & Wine", logo: "/placeholder.svg?height=100&width=200" },
-    { name: "Netflix", logo: "/placeholder.svg?height=100&width=200" },
-    { name: "Condé Nast Traveler", logo: "/placeholder.svg?height=100&width=200" },
-    { name: "Vanity Fair", logo: "/placeholder.svg?height=100&width=200" },
+    { name: "Vogue", logo: "/vogue-logo.webp?height=100&width=200" },
+    { name: "GQ", logo: "/GQ-logo.webp?height=100&width=200" },
+    { name: "Food & Wine", logo: "/FoodWine-logo.png?height=100&width=200" },
+    { name: "Netflix", logo: "/Netflix-logo.webp?height=100&width=200" },
+    { name: "Condé Nast Traveler", logo: "/CondéNastTraveler-logo.webp?height=100&width=200" },
+    { name: "Vanity Fair", logo: "/VanityFair-logo.webp?height=100&width=200" },
   ]
 
   const socialPosts = [
@@ -788,7 +788,7 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <div className="relative aspect-[3/4] w-full">
-                <Image src="/placeholder.svg?height=900&width=600" alt="Our story" fill className="object-cover" />
+                <Image src="/OurStory.jpg?height=900&width=600" alt="Our story" fill className="object-cover" />
               </div>
             </motion.div>
             <motion.div
@@ -1025,7 +1025,7 @@ export default function Home() {
               className="order-1 lg:order-2"
             >
               <div className="relative aspect-square w-full">
-                <Image src="/TheLab.svg?height=800&width=800" alt="The Lab" fill className="object-cover" />
+                <Image src="/TheLab.jpg?height=600&width=1000" alt="The Lab" fill className="object-cover" />
               </div>
             </motion.div>
           </div>
@@ -1062,7 +1062,7 @@ export default function Home() {
               >
                 <div className="relative aspect-[3/2] bg-neutral-900 flex items-center justify-center p-6 transition-all duration-300 group-hover:bg-neutral-800">
                   <Image
-                    src={item.logo || "/placeholder.svg"}
+                    src={item.logo || "/ICLogo.png"}
                     alt={item.name}
                     width={150}
                     height={75}
@@ -1078,60 +1078,6 @@ export default function Home() {
       {/* Instagram Feed */}
       <section ref={socialRef} id="social" className="py-24 md:py-32 bg-neutral-950">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-5xl font-serif mb-4">Follow Our Journey</h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Join our community on Instagram and share your gelato moments with us using #GelatoArtisans
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {socialPosts.map((post, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                className="group cursor-pointer"
-                onClick={() => showNotification("Follow us on Instagram for more delicious content!", "info")}
-              >
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src={post.image || "/placeholder.svg"}
-                    alt="Instagram post"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-8 h-8"
-                    >
-                      <path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
-                      <path d="M18 10a6 6 0 0 0-12 0"></path>
-                    </svg>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

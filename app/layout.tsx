@@ -24,6 +24,9 @@ export const metadata = {
   title: "La Crème Glacée | Premium Handcrafted Ice Cream",
   description: "Experience the finest artisanal ice cream made with premium ingredients and traditional methods.",
   generator: "v0.dev",
+  icons: {
+    icon: '/ICLogo.png',
+  },
 }
 
 export default function RootLayout({
