@@ -1025,7 +1025,7 @@ export default function Home() {
               className="order-1 lg:order-2"
             >
               <div className="relative aspect-square w-full">
-                <Image src="/placeholder.svg?height=800&width=800" alt="The Lab" fill className="object-cover" />
+                <Image src="/TheLab.svg?height=800&width=800" alt="The Lab" fill className="object-cover" />
               </div>
             </motion.div>
           </div>
